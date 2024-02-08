@@ -297,11 +297,10 @@ local minetest = {
         read_schematic = empty,
 
         -- HTTP Requests
-        request_http_api = standards.def_fields("fetch", "fetch_async", "fetch_async_get"),
+        request_http_api = empty,
 
         -- Storage API
-        get_mod_storage = standards.def_fields("contains", "get", "set_string", "get_string", "set_int", "get_int",
-            "set_float", "get_float", "get_keys", "to_table", "from_table", "equals"),
+        get_mod_storage = empty,
 
         -- Misc
         get_connected_players = empty,
@@ -415,7 +414,6 @@ return {
         vector = vector,
         dump = empty,
         dump2 = empty,
-
 
         -- classes
         AreaStore = empty,
