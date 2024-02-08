@@ -4,6 +4,7 @@ local standards = require "luacheck.standards"
 
 local empty = {}
 local read_write = {read_only = false}
+local open_table = {read_only = false, other_fields = true}
 
 -- main namespace
 local minetest = {
@@ -15,7 +16,7 @@ local minetest = {
         get_game_info = empty,
         get_worldpath = empty,
         is_singleplayer = empty,
-        features = empty,
+        features = open_table,
         has_feature = empty,
         get_player_information = empty,
         get_player_window_information = empty,
@@ -362,22 +363,22 @@ local minetest = {
         translate = empty,
 
         -- Global tables
-        registered_items = read_write,
-        registered_nodes = read_write,
-        registered_craftitems = read_write,
-        registered_tools = read_write,
-        registered_entities = read_write,
-        object_refs = read_write,
-        luaentities = read_write,
-        registered_abms = read_write,
-        registered_lbms = read_write,
-        registered_aliases = read_write,
-        registered_ores = read_write,
-        registered_biomes = read_write,
-        registered_decorations = read_write,
-        registered_schematics = read_write,
-        registered_chatcommands = read_write,
-        registered_privileges = read_write
+        registered_items = open_table,
+        registered_nodes = open_table,
+        registered_craftitems = open_table,
+        registered_tools = open_table,
+        registered_entities = open_table,
+        object_refs = open_table,
+        luaentities = open_table,
+        registered_abms = open_table,
+        registered_lbms = open_table,
+        registered_aliases = open_table,
+        registered_ores = open_table,
+        registered_biomes = open_table,
+        registered_decorations = open_table,
+        registered_schematics = open_table,
+        registered_chatcommands = open_table,
+        registered_privileges = open_table
     }
 }
 
