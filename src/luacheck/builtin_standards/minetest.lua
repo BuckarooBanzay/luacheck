@@ -342,6 +342,25 @@ local minetest = {
         -- Error Handling
         error_handler = read_write,
 
+        -- Helper functions
+        wrap_text = empty,
+        pos_to_string = empty,
+        string_to_pos = empty,
+        string_to_area = empty,
+        is_yes = empty,
+        is_nan = empty,
+        get_us_time = empty,
+        pointed_thing_to_face_pos = empty,
+        get_tool_wear_after_use = empty,
+        get_dig_params = empty,
+        get_hit_params = empty,
+        colorize = empty,
+
+        -- Translations
+        get_translator = empty,
+        get_translated_string = empty,
+        translate = empty,
+
         -- Global tables
         registered_items = read_write,
         registered_nodes = read_write,
@@ -363,11 +382,22 @@ local minetest = {
 }
 
 -- Table additions
-local table = standards.def_fields("copy")
+local table = standards.def_fields("copy", "indexof", "insert_all", "key_value_swap", "shuffle")
+
+-- String additions
+local string = standards.def_fields("split", "trim")
+
+-- Math additions
+local math = standards.def_fields("hypot", "sign", "factorial", "round")
 
 -- Bit library
 local bit = standards.def_fields("tobit","tohex","bnot","band","bor","bxor","lshift","rshift","arshift","rol","ror",
     "bswap")
+
+-- vector util
+local vector = standards.def_fields("new", "zero", "copy", "from_string", "to_string", "direction", "distance",
+    "length", "normalize", "floor", "round", "apply", "combine", "equals", "sort", "angle", "dot", "cross", "offset",
+    "check", "in_area", "add", "subtract", "multiply", "divide", "rotate", "rotate_around_axis", "dir_to_rotation")
 
 return {
     read_globals = {
@@ -376,7 +406,15 @@ return {
 
         -- extensions
         table = table,
+        math = math,
         bit = bit,
+        string = string,
+
+        -- Helper functions
+        vector = vector,
+        dump = empty,
+        dump2 = empty,
+
 
         -- classes
         AreaStore = empty,
