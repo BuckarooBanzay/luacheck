@@ -437,7 +437,7 @@ return {
         PseudoRandom = empty,
         PcgRandom = empty,
         SecureRandom = empty,
-        VoxelArea = empty,
+        VoxelArea = open_table,
         VoxelManip = empty,
         Raycast = empty,
         Settings = empty,
