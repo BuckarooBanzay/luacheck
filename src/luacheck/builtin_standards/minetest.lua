@@ -377,7 +377,21 @@ local minetest = {
         registered_decorations = open_table,
         registered_schematics = open_table,
         registered_chatcommands = open_table,
-        registered_privileges = open_table
+        registered_privileges = open_table,
+
+        -- Constants (see: https://github.com/minetest/minetest/blob/master/builtin/game/constants.lua)
+        CONTENT_UNKNOWN = empty,
+        CONTENT_AIR = empty,
+        CONTENT_IGNORE = empty,
+        EMERGE_CANCELLED = empty,
+        EMERGE_ERRORED = empty,
+        EMERGE_FROM_MEMORY = empty,
+        EMERGE_FROM_DISK = empty,
+        EMERGE_GENERATED = empty,
+        MAP_BLOCKSIZE = empty,
+        PLAYER_MAX_HP_DEFAULT = empty,
+        PLAYER_MAX_BREATH_DEFAULT = empty,
+        LIGHT_MAX = empty
     }
 }
 
